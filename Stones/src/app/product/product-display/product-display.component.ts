@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../product';
 
 @Component({
@@ -8,7 +8,11 @@ import { Product } from '../product';
 })
 export class ProductDisplayComponent implements OnInit {
 
-  public product: Product = new Product(12, 'Granitstein Gravo', 134.56, 12);
+  @Input()
+  public product: Product;
+
+  @Output()
+  public priceChange = new EventEmitter<number>();
 
   constructor() { }
 
@@ -17,6 +21,6 @@ export class ProductDisplayComponent implements OnInit {
 
   public raisePrice(): void {
     this.product.price += 5;
-    alert('Aktueller preis: ' + this.product.price);
+    this.priceChange.emit(this.product.price);
   }
 }
