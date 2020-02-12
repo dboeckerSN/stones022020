@@ -14,6 +14,7 @@ describe('ProductFormComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         ProductFormComponent,
+      
       ],
       imports: [
         ReactiveFormsModule,
