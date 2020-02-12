@@ -2,6 +2,8 @@
   <ul>
     <li>{{product.id}}</li>
     <li *ngIf="showName" class="nameAttribute">{{product.name}}</li>
+    <li>{{ product.price | netto: 19: "netto" | currency: "EUR":"symbol" }}</li>
+    <li>{{ product.price | netto: 19: "brutto" | currency: "EUR":"symbol" }}</li>
     <li>{{product.price}}</li>
     <li>{{product.weight}}</li>
   </ul>

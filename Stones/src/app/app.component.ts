@@ -7,6 +7,7 @@ import { Product } from './product/product';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public date = new Date();
   public products: Array<Product> = [
     {
       id: 0,

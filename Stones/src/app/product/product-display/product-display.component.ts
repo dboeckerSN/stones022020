@@ -25,11 +25,12 @@ export class ProductDisplayComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggle(){
+  toggle() {
     this.showName = !this.showName;
   }
 
   public raisePrice(): void {
+    console.log(this.product);
     this.product.price += 5;
     this.priceChange.emit(this.product.price);
   }
