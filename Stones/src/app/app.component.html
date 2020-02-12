@@ -1,5 +1,7 @@
 <mat-toolbar color="primary">My App</mat-toolbar>
 {{ date | date: "dd.MM.yyyy" }}
+<stn-product-form (saveProduct)="onSaveProduct($event)"></stn-product-form>
+
 <mat-card *ngFor="let product of products; let isOdd = odd" [ngClass]="{'grey-background' : isOdd}">
   <stn-product-display [product]="product" (priceChange)="onPriceChange($event)">
   </stn-product-display>

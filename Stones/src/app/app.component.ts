@@ -57,4 +57,8 @@ export class AppComponent {
     alert('Neuer Preis' + price);
   }
 
+  public onSaveProduct(product: Product) {
+    this.products.unshift(product);
+  }
+
 }
