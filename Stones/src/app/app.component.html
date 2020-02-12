@@ -1,9 +1,9 @@
-<mat-toolbar color="primary">My App</mat-toolbar>
-{{ date | date: "dd.MM.yyyy" }}
-<stn-product-form (saveProduct)="onSaveProduct($event)"></stn-product-form>
+<mat-toolbar color="primary">
+  Stones
+  <a [routerLink]="['/products']">Produktliste</a>
+  <a [routerLink]="['/products/new']">Neues Produkt anlegen</a>
+</mat-toolbar>
 
-<mat-card *ngFor="let product of products; let isOdd = odd" [ngClass]="{'grey-background' : isOdd}">
-  <stn-product-display [product]="product" (priceChange)="onPriceChange($event)">
-  </stn-product-display>
-</mat-card>
+
+
 <router-outlet></router-outlet>

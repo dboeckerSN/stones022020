@@ -1,0 +1,4 @@
+<mat-card *ngFor="let product of products; let isOdd = odd" [ngClass]="{'grey-background' : isOdd}">
+  <stn-product-display [product]="product" (priceChange)="onPriceChange($event)">
+  </stn-product-display>
+</mat-card>

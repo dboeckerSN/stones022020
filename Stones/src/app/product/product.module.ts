@@ -10,12 +10,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductListComponent } from './product-list/product-list.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     ProductDisplayComponent,
     NettoPipe,
     ProductFormComponent,
+    ProductListComponent,
     ],
   imports: [
     CommonModule,
@@ -24,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
+    MatCardModule,
     ],
   exports: [
     ProductDisplayComponent,
